@@ -32,7 +32,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "pnpm run build",
+    "build": "gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
