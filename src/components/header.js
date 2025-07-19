@@ -4,11 +4,8 @@ import { Link } from 'gatsby';
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const navigation = [
-    { name: 'Home', to: '/' },
-    { name: 'About', to: '/about' },
-    { name: 'Services', to: '/services' },
+    { name: 'FAQ', to: '/faq' },
     { name: 'Blog', to: '/blog' },
-    { name: 'Contact', to: '/contact' },
   ];
 
   return (

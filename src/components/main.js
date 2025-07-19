@@ -59,6 +59,15 @@ export default function SchemaGenerator() {
   const [brand, setBrand] = useState('');
   const [availability, setAvailability] = useState('InStock');
   const [productUrl, setProductUrl] = useState('');
+  const [offersUrl, setOffersUrl] = useState('');
+  const [offersPrice, setOffersPrice] = useState('');
+  const [offersPriceCurrency, setOffersPriceCurrency] = useState('');
+  const [offersAvailability, setOffersAvailability] = useState('');
+  const [offersItemCondition, setOffersItemCondition] = useState('');
+  const [offersItemConditionNote, setOffersItemConditionNote] = useState('');
+  const [offersItemConditionDate, setOffersItemConditionDate] = useState('');
+  const [offersItemConditionUrl, setOffersItemConditionUrl] = useState('');
+  const [offersItemList, setOffersItemList] = useState('');
 
   // Collection
   const [collectionItems, setCollectionItems] = useState(''); // comma‑separated URLs
@@ -134,6 +143,11 @@ export default function SchemaGenerator() {
               url:             productUrl,
               price:           price,
               priceCurrency:   currency,
+              itemCondition:    `https://schema.org/${offersItemCondition}`,
+              itemConditionNote: offersItemConditionNote,
+              itemConditionDate: offersItemConditionDate,
+              itemConditionUrl: offersItemConditionUrl,
+              itemList:        offersItemList,
               availability:    `https://schema.org/${availability}`,
             },
           });
@@ -297,6 +311,13 @@ export default function SchemaGenerator() {
                     <Field label="URL" value={url} onChange={setUrl} placeholder="https://example.com" />
                     <Field label="Logo URL" value={logoUrl} onChange={setLogoUrl} placeholder="https://example.com/logo.png" />
                     <Field label="Telephone" value={telephone} onChange={setTelephone} placeholder="+1‑555‑123‑4567" />
+                    <Field label="Email" value={email} onChange={setEmail} placeholder="your@email.com" />
+                    <Field label="Street Address" value={streetAddress} onChange={setStreetAddress} placeholder="123 Main St" />
+                    <Field label="Address Locality" value={addressLocality} onChange={setAddressLocality} placeholder="City" />
+                    <Field label="Address Region" value={addressRegion} onChange={setAddressRegion} placeholder="State" />
+                    <Field label="Postal Code" value={postalCode} onChange={setPostalCode} placeholder="12345" />
+                    <Field label="Opening Hours" value={openingHours} onChange={setOpeningHours} placeholder="Mo–Fr 09:00–18:00" />
+
                     <Field
                     label="Facebook URL"
                     value={facebook}
@@ -342,6 +363,17 @@ export default function SchemaGenerator() {
                     onChange={setProductUrl}
                     placeholder="https://example.com/product"
                     />
+                    <Field label="Reviews Count" value={reviewsCount} onChange={setReviewsCount} placeholder="100" />
+                    <Field label="Reviews Rating" value={reviewsRating} onChange={setReviewsRating} placeholder="4.5" />
+                    <Field label="Reviews List" value={reviewsList} onChange={setReviewsList} placeholder="John Doe|2025-01-01|Great product|5" />
+                    <Field label="Offers URL" value={offersUrl} onChange={setOffersUrl} placeholder="https://example.com/product" />
+                    <Field label="Offers Price" value={offersPrice} onChange={setOffersPrice} placeholder="0.00" />
+                    <Field label="Offers Price Currency" value={offersPriceCurrency} onChange={setOffersPriceCurrency} placeholder="USD" />
+                    <Field label="Offers Availability" value={offersAvailability} onChange={setOffersAvailability} placeholder="InStock or OutOfStock" />
+                    <Field label="Offers Item Condition" value={offersItemCondition} onChange={setOffersItemCondition} placeholder="New or Used" />
+                    <Field label="Offers Item Condition Note" value={offersItemConditionNote} onChange={setOffersItemConditionNote} placeholder="New with tags" />
+                    <Field label="Offers Item Condition Date" value={offersItemConditionDate} onChange={setOffersItemConditionDate} placeholder="2025-01-01" />
+                    <Field label="Offers Item Condition URL" value={offersItemConditionUrl} onChange={setOffersItemConditionUrl} placeholder="https://example.com/product" />
                 </>
                 )}
 
