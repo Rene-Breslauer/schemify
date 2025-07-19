@@ -89,12 +89,10 @@ export default function SchemaGenerator() {
 
 
   const generateSchema = () => {
-  ReactGA.event({
-    category: 'SchemaBuilder',
-    action: 'Generated JSON-LD',
-    label: schemaType,
-    dimension1: url,
-  })
+    gtag('event', 'generate_json_ld', {
+      schema_type: schemaType,
+      website_url: url
+    });
 
     const obj = {
       '@context': 'https://schema.org',
@@ -235,12 +233,10 @@ export default function SchemaGenerator() {
   };
 
   const copyToClipboard = (text, isShopify) => {
-    ReactGA.event({
-      category: 'SchemaBuilder',
-      action: 'Copied to clipboard',
-      label: isShopify ? 'Shopify' : 'Builder',
-      dimension1: url,
-    })
+    gtag('event', 'copied_to_clipboard', {
+      schema_type: schemaType,
+      website_url: url
+    });
     navigator.clipboard.writeText(text);
     if (isShopify) {
       setCopiedShopify(true);
