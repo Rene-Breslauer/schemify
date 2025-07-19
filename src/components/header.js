@@ -20,7 +20,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8
+          <div className="flex space-x-8
           ">
             {navigation.map((item) => (
               <Link
