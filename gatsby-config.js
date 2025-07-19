@@ -36,6 +36,10 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/favicon.png`,
       },
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+      },
     },
     `gatsby-plugin-postcss`,
   ],
