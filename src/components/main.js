@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Field from '../snippets/field';
 import CopyButton from '../snippets/copyButton';
 import { shopifySchemas } from '../schemas/shopifySchemas';
+import ReactGA from "react-ga4"
 
 // Supported schema types
 const schemaTypes = ['Store', 'Product', 'Collection', 'Blog', 'Article'];
@@ -88,6 +89,13 @@ export default function SchemaGenerator() {
 
 
   const generateSchema = () => {
+  ReactGA.event({
+    category: 'SchemaBuilder',
+    action: 'Generated JSON-LD',
+    label: schemaType,
+    website_url: url,
+  })
+
     const obj = {
       '@context': 'https://schema.org',
       '@type': schemaType,
@@ -227,6 +235,12 @@ export default function SchemaGenerator() {
   };
 
   const copyToClipboard = (text, isShopify) => {
+    ReactGA.event({
+      category: 'SchemaBuilder',
+      action: 'Copied to clipboard',
+      label: isShopify ? 'Shopify' : 'Builder',
+      website_url: url,
+    })
     navigator.clipboard.writeText(text);
     if (isShopify) {
       setCopiedShopify(true);
