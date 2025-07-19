@@ -23,7 +23,6 @@ function Seo({
             title
             description
             author
-            logo
           }
         }
       }
@@ -48,7 +47,7 @@ function Seo({
         name: site.siteMetadata.author,
         logo: {
           "@type": "ImageObject",
-          url: `${siteUrl}${site.siteMetadata.logo}`,
+          url: `/favicon.png`,
         },
       },
     },
@@ -76,7 +75,7 @@ function Seo({
               name: site.siteMetadata.author,
               logo: {
                 "@type": "ImageObject",
-                url: `${siteUrl}${site.siteMetadata.logo}`,
+                url: `/favicon.png`,
               },
             },
             datePublished,
