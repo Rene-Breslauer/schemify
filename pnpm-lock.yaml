@@ -48,6 +48,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.6)
+      gatsby-cli:
+        specifier: ^5.14.0
+        version: 5.14.0
       gatsby-plugin-postcss:
         specifier: ^6.14.0
         version: 6.14.0(gatsby@5.14.5(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@5.8.3))(postcss@8.5.6)(typescript@5.8.3)(webpack@5.98.0)
