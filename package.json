@@ -6,16 +6,23 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@img/sharp-darwin-arm64": "^0.34.3",
     "gatsby": "^5.14.1",
     "gatsby-plugin-image": "^3.14.0",
     "gatsby-plugin-manifest": "^5.14.0",
     "gatsby-plugin-sharp": "^5.14.0",
+    "gatsby-remark-images-contentful": "^6.14.0",
+    "gatsby-source-contentful": "^8.15.0",
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-sharp": "^5.14.0",
+    "gatsby-transformer-sqip": "^5.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga4": "^2.1.0",
-    "sharp": "^0.32.6"
+    "sharp": "0.32.6"
+  },
+  "overrides": {
+    "sharp": "0.32.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.11",
