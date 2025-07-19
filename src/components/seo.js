@@ -38,6 +38,7 @@ function Seo({ description, title, children }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     </>
   )
 }

@@ -1,0 +1,102 @@
+/* src/styles/global.css */
+
+/* 1) Your variable‑font faces */
+@import "./fonts.css";
+
+/* 2) Tailwind’s core layers */
+@import "tailwindcss";
+
+/* 3) Plain‑CSS :root with hard‑coded values (no quotes around the values) */
+:root {
+  --bg-dark:    #000;
+  --text-body:  #DCC7BE;
+  --text-accent: #AFFC41;
+  --text-white: #FFF;
+  --font-sans:  RobotoFlex, sans-serif;
+  --font-mono:  VictorMono, monospace;
+  --text-body-rgb: 220 199 190;
+
+
+  --bg-dark-rgb:     0   0    0;
+  --text-body-rgb:   220 199 190;
+  --text-accent-rgb: 175 252  65;
+  --text-white-rgb:  255 255 255;
+}
+
+/* 4) Your base overrides using those vars */
+html,
+body {
+  background-color: var(--bg-dark);
+  color:            var(--text-body);
+  font-family:      var(--font-mono);
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div, li, button {
+  color: var(--text-body);
+  font-family: var(--font-mono);
+}
+
+a {
+  color: var(--text-accent) !important;
+  text-decoration: none !important;
+}
+
+input,
+textarea,
+select {
+    background-color: transparent;
+    border: 1px solid var(--text-body);
+    color: var(--text-body);
+    padding: 10px 20px;
+    border-radius: 0px;
+}
+
+textarea[readonly] {
+    background: linear-gradient(
+    135deg,
+    rgb(var(--text-body-rgb) / 10%) 0%,
+    rgb(var(--text-body-rgb) / 15%) 100%);  
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--text-accent);
+}
+
+.btn--primary {
+    background-color: transparent;
+    border: 1px solid var(--text-accent);
+    box-shadow: 2px 2px 0px 0px var(--text-accent);
+    color: var(--text-accent);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+
+    &:hover {
+        background-color: var(--text-accent);
+        color: var(--bg-dark);
+        transform: translate(2px, 2px);
+    }
+    &:active {
+        box-shadow: 0px 0px 12px var(--text-accent);
+        transform: translate(4px, 4px);
+    }
+}
+
+.border-accent {
+    border-color: var(--text-accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.text-white {
+  color: var(--text-white);
+}
