@@ -93,7 +93,7 @@ export default function SchemaGenerator() {
     category: 'SchemaBuilder',
     action: 'Generated JSON-LD',
     label: schemaType,
-    website_url: url,
+    dimension1: url,
   })
 
     const obj = {
@@ -239,7 +239,7 @@ export default function SchemaGenerator() {
       category: 'SchemaBuilder',
       action: 'Copied to clipboard',
       label: isShopify ? 'Shopify' : 'Builder',
-      website_url: url,
+      dimension1: url,
     })
     navigator.clipboard.writeText(text);
     if (isShopify) {
